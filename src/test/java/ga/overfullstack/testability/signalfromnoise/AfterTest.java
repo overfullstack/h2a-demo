@@ -6,6 +6,7 @@ import org.junit.jupiter.api.Test;
 import java.util.HashMap;
 import java.util.Map;
 
+import static ga.overfullstack.testability.signalfromnoise.After.fieldMapping;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class AfterTest {
@@ -14,7 +15,7 @@ class AfterTest {
   void fillEntityObj() {
     final var egg = ImmutableEgg.of(ImmutableID.of(1), 10, "field1Value", null, "field3Value");
     var actualPairs = new HashMap<String, String>();
-    After.fillEntityObj(egg, actualPairs::put);
+    After.fillEntityObj(egg, fieldMapping, actualPairs::put);
 
     var expectedPairs =
         Map.of(
