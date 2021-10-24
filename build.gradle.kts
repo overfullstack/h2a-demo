@@ -18,10 +18,10 @@ dependencies {
     implementation("io.vavr:vavr:+")
     implementation("org.slf4j:slf4j-api:+")
     implementation("org.springframework:spring-beans:+")
-    implementation("org.springframework:spring-context:5.3.8")
+    implementation("org.springframework:spring-context:5.3.11")
 
     runtimeOnly("org.apache.logging.log4j:log4j-slf4j18-impl:+")
-    testImplementation("org.mockito:mockito-core:3.11.1")
+    testImplementation("org.mockito:mockito-core:4.0.0")
     testImplementation(platform("org.junit:junit-bom:+"))
     testImplementation("org.junit.jupiter:junit-jupiter-api")
     testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine")
