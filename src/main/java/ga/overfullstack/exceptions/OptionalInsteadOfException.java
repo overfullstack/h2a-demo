@@ -1,12 +1,14 @@
 package ga.overfullstack.exceptions;
 
-import java.util.Optional;
-
 import static ga.overfullstack.exceptions.OptionalInsteadOfException.Access.ACCESS_1;
 import static ga.overfullstack.exceptions.OptionalInsteadOfException.Access.ACCESS_2;
 import static ga.overfullstack.exceptions.OptionalInsteadOfException.Access.ACCESS_3;
 
-/** Dummy code for Obstacle-1 Throw away exceptions. */
+import java.util.Optional;
+
+/**
+ * Dummy code for Obstacle-1 Throw away exceptions.
+ */
 public class OptionalInsteadOfException {
 
   void verifyUserAccess(String userId) throws NoAccessException {
@@ -34,25 +36,30 @@ public class OptionalInsteadOfException {
     return Optional.empty();
   }
 
+  // Dummy function
   private boolean hasAccess3(String userId) {
     return false;
   }
 
+  // Dummy function
   private boolean hasAccess2(String userId) {
     return false;
   }
 
+  // Dummy function
   private boolean hasAccess1(String userId) {
     return false;
-  }
-
-  private static class NoAccessException extends Exception {
-    NoAccessException(Access access3) {}
   }
 
   enum Access {
     ACCESS_1,
     ACCESS_2,
     ACCESS_3
+  }
+
+  private static class NoAccessException extends Exception {
+
+    NoAccessException(Access access3) {
+    }
   }
 }

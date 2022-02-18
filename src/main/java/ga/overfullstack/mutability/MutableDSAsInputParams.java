@@ -4,6 +4,7 @@ import java.util.Arrays;
 import java.util.List;
 
 public class MutableDSAsInputParams {
+
   static int sum(List<Integer> nums) {
     var result = 0;
     for (int num : nums) {
@@ -13,7 +14,9 @@ public class MutableDSAsInputParams {
   }
 
   static int sumAbsolute(List<Integer> nums) {
-    for (var i = 0; i < nums.size(); i++) nums.set(i, Math.abs(nums.get(i)));
+    for (var i = 0; i < nums.size(); i++) {
+      nums.set(i, Math.abs(nums.get(i)));
+    }
     return sum(nums); // DRY
   }
 

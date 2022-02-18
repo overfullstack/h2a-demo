@@ -6,6 +6,7 @@ import org.immutables.value.Value;
 import org.springframework.lang.Nullable;
 
 public class Before {
+
   void fillEntityObj(Egg egg, EggEntity eggEntity) {
     if (egg.field1() != null) {
       eggEntity.put(Fields.field1, egg.field1());
@@ -21,12 +22,14 @@ public class Before {
   @Value.Style(allParameters = true)
   @Value.Immutable
   interface ID {
+
     int id();
   }
 
   @Value.Style(allParameters = true)
   @Value.Immutable
   interface Egg {
+
     ID id();
 
     int age();

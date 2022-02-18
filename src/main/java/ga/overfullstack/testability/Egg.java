@@ -5,6 +5,7 @@ import org.immutables.value.Value;
 @Value.Style(allParameters = true)
 @Value.Immutable
 interface Egg {
+
   ID id();
 
   int age();

@@ -1,13 +1,19 @@
 package ga.overfullstack.mutability;
 
+import java.util.Calendar;
+import java.util.Date;
+import java.util.GregorianCalendar;
+import java.util.HashMap;
+import java.util.Map;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.util.*;
-
 @SuppressWarnings("deprecation")
 public class MutableDSAsOutputParams {
+
   private static final Logger logger = LoggerFactory.getLogger(MutableDSAsOutputParams.class);
+  /* --- ANOTHER DAY --*/
+  private static final Map<Integer, Date> eggLayingDateCacheById = new HashMap<>();
 
   Date getEggLayingDate(int eggId) {
     // heavy operation
@@ -44,14 +50,13 @@ public class MutableDSAsOutputParams {
     return false;
   }
 
-  /* --- ANOTHER DAY --*/
-  private static final Map<Integer, Date> eggLayingDateCacheById = new HashMap<>();
-
   public Date getEggLayingDate1(int eggId) {
     return eggLayingDateCacheById.computeIfAbsent(eggId, this::queryEggLayingDateFromDB);
   }
 
-  /** BUG 🐞 */
+  /**
+   * BUG 🐞
+   */
   void printEggAge() {
     var eggId = 0;
     if (isLaidInFirstHalf1(eggId)) {

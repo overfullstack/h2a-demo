@@ -1,13 +1,12 @@
 package ga.overfullstack.testability.signalfromnoise;
 
-import ga.overfullstack.testability.Fields;
-import org.junit.jupiter.api.Test;
-
-import java.util.HashMap;
-import java.util.Map;
-
 import static ga.overfullstack.testability.signalfromnoise.After.fieldMapping;
 import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import ga.overfullstack.testability.Fields;
+import java.util.HashMap;
+import java.util.Map;
+import org.junit.jupiter.api.Test;
 
 class AfterTest {
 

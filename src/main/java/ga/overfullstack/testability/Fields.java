@@ -1,7 +1,10 @@
 package ga.overfullstack.testability;
 
-public class Fields {
-  public static String field1 = "FIELD_1";
-  public static String field2 = "FIELD_2";
-  public static String field3 = "FIELD_3";
+public final class Fields {
+
+  public static final String field1 = "FIELD_1";
+  public static final String field2 = "FIELD_2";
+  public static final String field3 = "FIELD_3";
+  private Fields() {
+  }
 }

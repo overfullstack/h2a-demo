@@ -7,13 +7,14 @@ import java.util.Map;
  * A dummy legacy class
  */
 public class EggEntity {
-    private final Map<String, String> data = new HashMap<>();
 
-    public void put(String field, String value) {
-      data.put(field, value);
-    }
+  private final Map<String, String> data = new HashMap<>();
 
-    String get(String field) {
-      return data.get(field);
-    }
+  public void put(String field, String value) {
+    data.put(field, value);
   }
+
+  String get(String field) {
+    return data.get(field);
+  }
+}
