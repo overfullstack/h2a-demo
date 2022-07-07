@@ -14,7 +14,8 @@ class BeforeTest {
   void mapToEntityObjTest() {
     // * `EggEntity` Object can't be instantiated in a Unit test context.
     final var mockEggEntity = mock(EggEntity.class);
-    final var egg = ImmutableEgg.of(ImmutableID.of(1), 10, "field1Value", "field2Value", "field3Value");
+    final var egg =
+        ImmutableEgg.of(ImmutableID.of(1), 10, "field1Value", "field2Value", "field3Value");
     new Before().fillEntityObj(egg, mockEggEntity);
     verify(mockEggEntity).put(Fields.field1, "field1Value");
     verify(mockEggEntity, never()).put(Fields.field2, null);

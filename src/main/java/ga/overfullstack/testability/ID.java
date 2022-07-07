@@ -4,8 +4,7 @@ import org.immutables.value.Value;
 
 @Value.Style(allParameters = true)
 @Value.Immutable
-public
-interface ID {
+public interface ID {
 
   int value();
 }

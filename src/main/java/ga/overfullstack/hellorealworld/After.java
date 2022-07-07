@@ -11,33 +11,32 @@ import org.immutables.value.Value;
 public class After {
 
   /**
-   * ! The below validate lambdas has boilerplate code. But this is only for demo. To see how to effectively write such
-   * validations, please refer to this talk:
+   * ! The below validate lambdas has boilerplate code. But this is only for demo. To see how to
+   * effectively write such validations, please refer to this talk:
    * https://www.youtube.com/watch?v=Dvr6gx4XaD8&list=PLrJbJ9wDl9EC0bG6y9fyDylcfmB_lT_Or&index=1
    */
   static final Function<ImmutableEgg, Either<Tuple2<ID, Failure>, ImmutableEgg>> validateAge =
-      eggToValidate -> Either.<Tuple2<ID, Failure>, ImmutableEgg>right(eggToValidate)
-          .filterOrElse(
-              egg -> egg.age() < 10,
-              rottenEgg -> Tuple.of(rottenEgg.id(), Failure.ROTTEN)
-          );
+      eggToValidate ->
+          Either.<Tuple2<ID, Failure>, ImmutableEgg>right(eggToValidate)
+              .filterOrElse(
+                  egg -> egg.age() < 10, rottenEgg -> Tuple.of(rottenEgg.id(), Failure.ROTTEN));
 
   static final Function<ImmutableEgg, Either<Tuple2<ID, Failure>, ImmutableEgg>> validateField1 =
-      eggToValidate -> Either.<Tuple2<ID, Failure>, ImmutableEgg>right(eggToValidate)
-          .filterOrElse(
-              egg -> !egg.field1().isEmpty(),
-              rottenEgg -> Tuple.of(rottenEgg.id(), Failure.FIELD_1_ERROR)
-          );
+      eggToValidate ->
+          Either.<Tuple2<ID, Failure>, ImmutableEgg>right(eggToValidate)
+              .filterOrElse(
+                  egg -> !egg.field1().isEmpty(),
+                  rottenEgg -> Tuple.of(rottenEgg.id(), Failure.FIELD_1_ERROR));
 
   // Dummy function
-  static List<Either<Tuple2<ID, Failure>, ImmutableEgg>> filterDuplicates(List<ImmutableEgg> eggsFromRequest) {
+  static List<Either<Tuple2<ID, Failure>, ImmutableEgg>> filterDuplicates(
+      List<ImmutableEgg> eggsFromRequest) {
     return List.of();
   }
 
-  static Either<Tuple2<ID, Failure>, ImmutableEgg> validate(Either<Tuple2<ID, Failure>, ImmutableEgg> eggToValidate) {
-    return eggToValidate
-        .flatMap(validateAge)
-        .flatMap(validateField1);
+  static Either<Tuple2<ID, Failure>, ImmutableEgg> validate(
+      Either<Tuple2<ID, Failure>, ImmutableEgg> eggToValidate) {
+    return eggToValidate.flatMap(validateAge).flatMap(validateField1);
   }
 
   // Dummy Function
@@ -47,7 +46,8 @@ public class After {
   }
 
   // Dummy function
-  static Either<DMLOperationException, List<EggEntity>> bulkInsertIntoDB(List<EggEntity> eggEntityObjs) {
+  static Either<DMLOperationException, List<EggEntity>> bulkInsertIntoDB(
+      List<EggEntity> eggEntityObjs) {
     return Either.right(List.of(new EggEntity()));
   }
 
@@ -86,7 +86,5 @@ public class After {
     String field3();
   }
 
-  private static class DMLOperationException extends Exception {
-
-  }
+  private static class DMLOperationException extends Exception {}
 }

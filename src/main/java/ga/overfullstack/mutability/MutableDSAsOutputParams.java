@@ -54,9 +54,7 @@ public class MutableDSAsOutputParams {
     return eggLayingDateCacheById.computeIfAbsent(eggId, this::queryEggLayingDateFromDB);
   }
 
-  /**
-   * BUG 🐞
-   */
+  /** BUG 🐞 */
   void printEggAge() {
     var eggId = 0;
     if (isLaidInFirstHalf1(eggId)) {

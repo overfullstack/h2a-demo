@@ -6,9 +6,7 @@ import static ga.overfullstack.exceptions.OptionalInsteadOfException.Access.ACCE
 
 import java.util.Optional;
 
-/**
- * Dummy code for Obstacle-1 Throw away exceptions.
- */
+/** Dummy code for Obstacle-1 Throw away exceptions. */
 public class OptionalInsteadOfException {
 
   void verifyUserAccess(String userId) throws NoAccessException {
@@ -59,7 +57,6 @@ public class OptionalInsteadOfException {
 
   private static class NoAccessException extends Exception {
 
-    NoAccessException(Access access3) {
-    }
+    NoAccessException(Access access3) {}
   }
 }

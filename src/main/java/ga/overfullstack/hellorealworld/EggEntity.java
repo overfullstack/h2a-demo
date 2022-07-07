@@ -3,9 +3,7 @@ package ga.overfullstack.hellorealworld;
 import java.util.HashMap;
 import java.util.Map;
 
-/**
- * A dummy legacy class
- */
+/** A dummy legacy class */
 public class EggEntity {
 
   private final Map<String, String> data = new HashMap<>();

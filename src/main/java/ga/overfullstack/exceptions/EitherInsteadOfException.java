@@ -17,5 +17,4 @@ public class EitherInsteadOfException {
     }
     return Either.left(new NumberFormatException("Not a valid integer"));
   }
-
 }

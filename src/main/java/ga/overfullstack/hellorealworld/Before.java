@@ -40,16 +40,13 @@ public class Before {
   }
 
   // Dummy Function
-  private void handlePartialFailures(HashMap<ID, Failure> failureMap, DMLOperationException ex) {
-  }
+  private void handlePartialFailures(HashMap<ID, Failure> failureMap, DMLOperationException ex) {}
 
   // Dummy Function
-  void filterDuplicates(Map<ID, Failure> failureMap, List<Egg> eggsFromRequest) {
-  }
+  void filterDuplicates(Map<ID, Failure> failureMap, List<Egg> eggsFromRequest) {}
 
   // Dummy Function
-  void validate(Map<ID, Failure> failureMap, List<Egg> nonDuplicateEggs) {
-  }
+  void validate(Map<ID, Failure> failureMap, List<Egg> nonDuplicateEggs) {}
 
   // Dummy Function
   List<EggEntity> toEntityObjs(List<Egg> validEggs) {
@@ -57,8 +54,7 @@ public class Before {
   }
 
   // Dummy Function
-  void bulkInsertIntoDB(List<EggEntity> eggEntityObjs) throws DMLOperationException {
-  }
+  void bulkInsertIntoDB(List<EggEntity> eggEntityObjs) throws DMLOperationException {}
 
   enum Failure {
     ROTTEN,
@@ -117,7 +113,5 @@ public class Before {
     }
   }
 
-  private static class DMLOperationException extends Exception {
-
-  }
+  private static class DMLOperationException extends Exception {}
 }

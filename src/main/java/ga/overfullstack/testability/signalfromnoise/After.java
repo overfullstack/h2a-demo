@@ -13,7 +13,9 @@ public class After {
           Fields.field2, ImmutableEgg::field2,
           Fields.field3, ImmutableEgg::field3);
 
-  static void fillEntityObj(ImmutableEgg egg, Map<String, Function<ImmutableEgg, String>> fieldMapping,
+  static void fillEntityObj(
+      ImmutableEgg egg,
+      Map<String, Function<ImmutableEgg, String>> fieldMapping,
       BiConsumer<String, String> filler) {
     fieldMapping.forEach(
         (fieldId, valueMapper) -> {
