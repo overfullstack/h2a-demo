@@ -27,10 +27,7 @@ public class MutableDSAsOutputParams {
   // Dependent component - 1
   boolean isLaidInFirstHalf(int eggId) {
     var layingDate = getEggLayingDate(eggId);
-    if (layingDate.getDate() < 15) {
-      return true;
-    }
-    return false;
+    return layingDate.getDate() < 15;
   }
 
   // Dependent component - 2
@@ -44,7 +41,7 @@ public class MutableDSAsOutputParams {
     if (layingDate.getDate() < 15) {
       // It's just logging, let's reuse the same Date obj for month and year
       layingDate.setDate(15); // Mutation 👹
-      logger.info("This egg was laid before: " + layingDate);
+      logger.info("This egg was laid before: {}", layingDate);
       return true;
     }
     return false;
@@ -59,7 +56,7 @@ public class MutableDSAsOutputParams {
     var eggId = 0;
     if (isLaidInFirstHalf1(eggId)) {
       final var age = calculateEggAge(eggId, new Date());
-      System.out.println(age);
+      logger.info("Egg Age: {}", age);
     }
   }
 }

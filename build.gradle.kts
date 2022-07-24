@@ -3,7 +3,7 @@ import com.diffplug.spotless.extra.wtp.EclipseWtpFormatterStep.XML
 plugins {
   java
   id("com.adarshr.test-logger") version "3.2.0"
-  id("com.diffplug.spotless") version "6.4.2"
+  id("com.diffplug.spotless") version "6.8.0"
 }
 
 group = "ga.overfullstack"
@@ -17,11 +17,15 @@ spotless {
   kotlin {
     target("src/main/java/**/*.kt", "src/test/java/**/*.kt")
     targetExclude("$buildDir/generated/**/*.*")
-    ktlint().userData(mapOf("indent_size" to "2", "continuation_indent_size" to "2"))
+    ktlint()
+      .setUseExperimental(true)
+      .editorConfigOverride(mapOf("indent_size" to "2", "continuation_indent_size" to "2"))
   }
   kotlinGradle {
     target("*.gradle.kts")
-    ktlint().userData(mapOf("indent_size" to "2", "continuation_indent_size" to "2"))
+    ktlint()
+      .setUseExperimental(true)
+      .editorConfigOverride(mapOf("indent_size" to "2", "continuation_indent_size" to "2"))
   }
   java {
     toggleOffOn()
