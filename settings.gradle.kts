@@ -5,4 +5,4 @@ pluginManagement {
   }
 }
 
-rootProject.name = "h2a"
+rootProject.name = "h2a-demo"

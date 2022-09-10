@@ -7,7 +7,7 @@
         <processorPath useClasspath="false">
           <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.immutables/value/2.9.0/36d6ea4ee2bd9eff08d201f4db1d18e1bbef221e/value-2.9.0.jar" />
         </processorPath>
-        <module name="h2a.main" />
+        <module name="h2a-demo.main" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="17" />
