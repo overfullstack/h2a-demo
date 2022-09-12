@@ -2,7 +2,6 @@ package ga.overfullstack.testability.di;
 
 import ga.overfullstack.hellorealworld.EggEntity;
 import ga.overfullstack.testability.ID;
-import ga.overfullstack.testability.ImmutableID;
 import java.util.function.Function;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -28,6 +27,6 @@ public class EggService {
   // Test Config
   @Bean(EGG_INSERTER)
   public Function<EggEntity, ID> insertNoOp() {
-    return eggEntity -> ImmutableID.of(1); // stub
+    return eggEntity -> ID.of(1); // stub
   }
 }

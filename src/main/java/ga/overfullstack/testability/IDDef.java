@@ -1,10 +1,11 @@
 package ga.overfullstack.testability;
 
+import ga.overfullstack.MyStyle;
 import org.immutables.value.Value;
 
-@Value.Style(allParameters = true)
+@MyStyle
 @Value.Immutable
-public interface ID {
+public interface IDDef {
 
   int value();
 }

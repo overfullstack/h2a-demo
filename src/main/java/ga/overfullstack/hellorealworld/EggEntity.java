@@ -12,7 +12,7 @@ public class EggEntity {
     data.put(field, value);
   }
 
-  String get(String field) {
+  public String get(String field) {
     return data.get(field);
   }
 }

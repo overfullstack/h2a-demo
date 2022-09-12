@@ -1,5 +1,6 @@
 package ga.overfullstack.testability.signalfromnoise;
 
+import ga.overfullstack.hellorealworld.EggEntity;
 import ga.overfullstack.testability.Fields;
 import java.util.Map;
 import java.util.function.BiConsumer;
@@ -24,5 +25,11 @@ public class After {
             filler.accept(fieldId, fieldValue);
           }
         });
+  }
+
+  public static void main(String[] args) {
+    final var eggEntity = new EggEntity();
+    final var egg = ImmutableEgg.of(ImmutableID.of(1), 2, "c", "d", "e");
+    fillEntityObj(egg, fieldMapping, eggEntity::put);
   }
 }

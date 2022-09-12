@@ -7,4 +7,11 @@
   <component name="ProjectRootManager" version="2" languageLevel="JDK_17" project-jdk-name="sdkman-current" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
   </component>
+  <component name="SuppressABINotification">
+    <option name="modulesWithSuppressedNotConfigured">
+      <set>
+        <option value="h2a-demo" />
+      </set>
+    </option>
+  </component>
 </project>
