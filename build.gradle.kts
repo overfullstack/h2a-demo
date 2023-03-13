@@ -52,7 +52,7 @@ spotless {
 }
 
 dependencies {
-  val immutablesVersion = "2.9.0"
+  val immutablesVersion = "2.9.3"
   annotationProcessor("org.immutables:value:$immutablesVersion")
   compileOnly("org.immutables:builder:$immutablesVersion")
   compileOnly("org.immutables:value-annotations:$immutablesVersion")
