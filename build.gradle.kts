@@ -3,7 +3,7 @@ import com.diffplug.spotless.extra.wtp.EclipseWtpFormatterStep.XML
 plugins {
   java
   id("com.adarshr.test-logger") version "3.2.0"
-  id("com.diffplug.spotless") version "6.8.0"
+  id("com.diffplug.spotless") version "6.17.0"
 }
 
 group = "ga.overfullstack"
@@ -52,7 +52,7 @@ spotless {
 }
 
 dependencies {
-  val immutablesVersion = "2.9.0"
+  val immutablesVersion = "2.9.3"
   annotationProcessor("org.immutables:value:$immutablesVersion")
   compileOnly("org.immutables:builder:$immutablesVersion")
   compileOnly("org.immutables:value-annotations:$immutablesVersion")
@@ -61,7 +61,7 @@ dependencies {
   implementation("org.springframework:spring-beans:+")
   implementation("org.springframework:spring-context:+")
 
-  runtimeOnly("org.apache.logging.log4j:log4j-slf4j18-impl:2.17.1")
+  runtimeOnly("org.apache.logging.log4j:log4j-slf4j18-impl:2.18.0")
   testImplementation("org.mockito:mockito-core:+")
   testImplementation(platform("org.junit:junit-bom:+"))
   testImplementation("org.junit.jupiter:junit-jupiter-api")
