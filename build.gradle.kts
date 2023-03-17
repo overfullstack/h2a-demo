@@ -57,7 +57,7 @@ dependencies {
   compileOnly("org.immutables:builder:$immutablesVersion")
   compileOnly("org.immutables:value-annotations:$immutablesVersion")
   implementation("io.vavr:vavr:0.10.4")
-  implementation("org.slf4j:slf4j-api:2.0.6")
+  implementation("org.slf4j:slf4j-api:2.0.7")
   implementation("org.springframework:spring-beans:+")
   implementation("org.springframework:spring-context:+")
 
