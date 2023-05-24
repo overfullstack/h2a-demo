@@ -3,7 +3,7 @@ import com.diffplug.spotless.extra.wtp.EclipseWtpFormatterStep.XML
 plugins {
   java
   id("com.adarshr.test-logger") version "3.2.0"
-  id("com.diffplug.spotless") version "6.18.0"
+  id("com.diffplug.spotless") version "6.19.0"
 }
 
 group = "ga.overfullstack"
