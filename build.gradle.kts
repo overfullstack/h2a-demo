@@ -2,7 +2,7 @@ import com.diffplug.spotless.extra.wtp.EclipseWtpFormatterStep.XML
 
 plugins {
   java
-  id("com.adarshr.test-logger") version "3.2.0"
+  id("com.adarshr.test-logger") version "4.0.0"
   id("com.diffplug.spotless") version "6.19.0"
 }
 
