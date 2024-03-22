@@ -3,7 +3,7 @@ import com.diffplug.spotless.extra.wtp.EclipseWtpFormatterStep.XML
 plugins {
   java
   id("com.adarshr.test-logger") version "4.0.0"
-  id("com.diffplug.spotless") version "6.19.0"
+  id("com.diffplug.spotless") version "6.25.0"
 }
 
 group = "ga.overfullstack"
@@ -52,12 +52,12 @@ spotless {
 }
 
 dependencies {
-  val immutablesVersion = "2.9.3"
+  val immutablesVersion = "2.10.1"
   annotationProcessor("org.immutables:value:$immutablesVersion")
   compileOnly("org.immutables:builder:$immutablesVersion")
   compileOnly("org.immutables:value-annotations:$immutablesVersion")
   implementation("io.vavr:vavr:0.10.4")
-  implementation("org.slf4j:slf4j-api:2.0.7")
+  implementation("org.slf4j:slf4j-api:2.0.12")
   implementation("org.springframework:spring-beans:+")
   implementation("org.springframework:spring-context:+")
 
